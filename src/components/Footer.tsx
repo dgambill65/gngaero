@@ -34,9 +34,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-white/80">
-              <li>123 Aviation Boulevard</li>
-              <li>Seattle, WA 98101</li>
-              <li>+1 (555) 123-4567</li>
+              <li>1121 Koble Lane</li>
+              <li>West Chester, PA 19382</li>
+              <li>610 996 7934</li>
               <li>info@gngdesignconsultants.com</li>
             </ul>
           </div>

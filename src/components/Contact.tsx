@@ -94,8 +94,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Phone</h4>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                    <p className="text-muted-foreground">+1 (555) 123-4568 (Emergencies)</p>
+                    <p className="text-muted-foreground">610 996 7934</p>
                   </div>
                 </div>
 
@@ -106,9 +105,8 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground">Office</h4>
                     <p className="text-muted-foreground">
-                      123 Aviation Boulevard<br />
-                      Aerospace District<br />
-                      Seattle, WA 98101
+                      1121 Koble Lane<br />
+                      West Chester, PA 19382
                     </p>
                   </div>
                 </div>
