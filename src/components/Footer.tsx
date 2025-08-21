@@ -37,7 +37,7 @@ const Footer = () => {
               <li>1121 Koble Lane</li>
               <li>West Chester, PA 19382</li>
               <li>610 996 7934</li>
-              <li>info@gngdesignconsultants.com</li>
+              <li>davidg@gngdesignllc.com</li>
             </ul>
           </div>
         </div>
