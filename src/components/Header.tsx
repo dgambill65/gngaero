@@ -10,7 +10,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-primary">AeroTech Engineering</h1>
+            <h1 className="text-xl font-bold text-primary">GnG Design Consultants</h1>
           </div>
           
           <nav className="hidden md:flex space-x-8">

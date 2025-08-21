@@ -36,7 +36,7 @@ const About = () => {
               Leading Aviation Engineering Consultancy
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              AeroTech Engineering has been at the forefront of aviation consulting for over two decades, 
+              GnG Design Consultants has been at the forefront of aviation consulting for over two decades, 
               providing specialized engineering services to aviation companies worldwide. Our team of certified 
               engineers and regulatory experts ensures your projects meet the most stringent industry standards.
             </p>
