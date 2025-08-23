@@ -10,6 +10,7 @@ import { z } from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   firstName: z.string().min(2, "First name must be at least 2 characters"),
@@ -36,12 +37,20 @@ const Contact = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      // Simulate form submission
-      console.log("Form submitted:", values);
-      
-      // Here you would typically send the data to your backend
-      // For now, we'll just show a success message
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { error } = await supabase
+        .from('consultation_requests')
+        .insert({
+          first_name: values.firstName,
+          last_name: values.lastName,
+          email: values.email,
+          company: values.company,
+          service: values.service,
+          message: values.message,
+        });
+
+      if (error) {
+        throw error;
+      }
       
       toast({
         title: "Consultation Request Submitted",
@@ -50,6 +59,7 @@ const Contact = () => {
       
       form.reset();
     } catch (error) {
+      console.error('Error submitting form:', error);
       toast({
         title: "Error",
         description: "Failed to submit request. Please try again.",
