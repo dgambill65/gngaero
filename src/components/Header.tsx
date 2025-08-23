@@ -5,6 +5,13 @@ import { useState } from "react";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,7 +36,7 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex">
-            <Button variant="default">Get Quote</Button>
+            <Button variant="default" onClick={scrollToContact}>Get Quote</Button>
           </div>
 
           <div className="md:hidden">
@@ -75,7 +82,7 @@ const Header = () => {
                 Contact
               </a>
               <div className="px-3 py-2">
-                <Button variant="default" className="w-full">Get Quote</Button>
+                <Button variant="default" className="w-full" onClick={scrollToContact}>Get Quote</Button>
               </div>
             </div>
           </div>
