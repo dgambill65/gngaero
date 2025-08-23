@@ -3,6 +3,19 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import heroAircraft from "@/assets/hero-aircraft.jpg";
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -28,11 +41,20 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Button size="lg" className="bg-primary hover:bg-primary-light text-white">
-              Start Your Project
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary-light text-white"
+              onClick={scrollToContact}
+            >
+              Get Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-aviation-navy">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-white text-white hover:bg-white hover:text-aviation-navy"
+              onClick={scrollToServices}
+            >
               Our Services
             </Button>
           </div>
