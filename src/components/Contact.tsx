@@ -51,6 +51,27 @@ const Contact = () => {
       if (error) {
         throw error;
       }
+
+      // Send email notification
+      try {
+        const { error: emailError } = await supabase.functions.invoke('send-consultation-notification', {
+          body: {
+            firstName: values.firstName,
+            lastName: values.lastName,
+            email: values.email,
+            company: values.company,
+            service: values.service,
+            message: values.message,
+          },
+        });
+
+        if (emailError) {
+          console.error('Error sending email notification:', emailError);
+        }
+      } catch (emailError) {
+        console.error('Email notification failed:', emailError);
+        // Don't fail the submission if email fails
+      }
       
       toast({
         title: "Consultation Request Submitted",
