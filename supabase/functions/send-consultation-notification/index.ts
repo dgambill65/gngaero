@@ -32,7 +32,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification to admin
     const emailResponse = await resend.emails.send({
-      from: "G&G Design LLC <onboarding@resend.dev>",
+      from: "G&G Design LLC <noreply@updates.gngaero.com>",
       to: ["davidg@gngdesignllc.com"], // Your admin email
       subject: `New Consultation Request from ${data.firstName} ${data.lastName}`,
       html: `
@@ -61,7 +61,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation to client
     const clientEmailResponse = await resend.emails.send({
-      from: "G&G Design LLC <onboarding@resend.dev>",
+      from: "G&G Design LLC <noreply@updates.gngaero.com>",
       to: [data.email],
       subject: "Thank You for Your Consultation Request",
       html: `
