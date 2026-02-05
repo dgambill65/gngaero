@@ -52,7 +52,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-white text-white hover:bg-white hover:text-aviation-navy"
+              className="border-white bg-transparent text-white hover:bg-white hover:text-aviation-navy"
               onClick={scrollToServices}
             >
               Our Services
