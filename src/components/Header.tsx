@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +31,9 @@ const Header = () => {
             <a href="#about" className="text-foreground hover:text-primary transition-colors">
               About
             </a>
+            <Link to="/founder" className="text-foreground hover:text-primary transition-colors">
+              Founder
+            </Link>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">
               Contact
             </a>
@@ -74,6 +78,13 @@ const Header = () => {
               >
                 About
               </a>
+              <Link
+                to="/founder"
+                className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Founder
+              </Link>
               <a
                 href="#contact"
                 className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
