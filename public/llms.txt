@@ -1,0 +1,10 @@
+# GnG Design Consultants
+
+> Aviation engineering consultancy in West Chester, PA, providing R&D, product design, certification, and FAA/EASA regulatory services.
+
+GnG Design Consultants (GnG Design LLC) is led by founder David Gambill, a senior aerospace engineering executive with 30+ years of experience across rotorcraft, tiltrotor, eVTOL, and fixed-wing programs. The firm advises aviation startups and established manufacturers on systems integration, digital engineering workflows, and certification planning.
+
+## Pages
+
+- [Home](/): Overview of services, expertise, and how to contact GnG Design.
+- [Founder](/founder): David Gambill's bio, professional experience, education, and patents.
