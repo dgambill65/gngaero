@@ -145,14 +145,23 @@ const Founder = () => {
 
             <div className="flex flex-col items-center text-center">
               <div className="relative mb-8">
-                <img
-                  src={davidPhoto.url}
-                  alt="Portrait of David Gambill, Founder of GnG Design Consultants"
-                  className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl ring-4 ring-primary-foreground/25"
-                  loading="eager"
-                  width={320}
-                  height={320}
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet={`${davidPhoto400wWebp.url} 400w, ${davidPhoto800wWebp.url} 800w`}
+                    sizes="(max-width: 768px) 256px, 320px"
+                  />
+                  <img
+                    src={davidPhoto800w.url}
+                    srcSet={`${davidPhoto400w.url} 400w, ${davidPhoto800w.url} 800w`}
+                    sizes="(max-width: 768px) 256px, 320px"
+                    alt="Portrait of David Gambill, Founder of GnG Design Consultants"
+                    className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl ring-4 ring-primary-foreground/25"
+                    loading="eager"
+                    width={320}
+                    height={320}
+                  />
+                </picture>
                 <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-primary-foreground text-primary text-sm font-semibold px-4 py-1.5 rounded-full shadow-lg">
                   Founder & CEO
                 </div>
