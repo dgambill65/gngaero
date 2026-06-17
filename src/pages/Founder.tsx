@@ -15,10 +15,6 @@ import {
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import davidPhoto400w from "@/assets/david-gambill-400w.jpg.asset.json";
-import davidPhoto400wWebp from "@/assets/david-gambill-400w.webp.asset.json";
-import davidPhoto800w from "@/assets/david-gambill-800w.jpg.asset.json";
-import davidPhoto800wWebp from "@/assets/david-gambill-800w.webp.asset.json";
 
 const focusAreas = [
   "eVTOL & Advanced Air Mobility",
@@ -51,6 +47,10 @@ const FOUNDER_TITLE = "David Gambill — Founder | GnG Design Consultants";
 const FOUNDER_DESC =
   "Meet David Gambill, Founder of GnG Design — aerospace engineer with 30+ years in rotorcraft, tiltrotor, eVTOL and certification leadership.";
 const FOUNDER_URL = "https://gngaero.lovable.app/founder";
+const DAVID_PHOTO_400W = "/assets/david-gambill-400w.jpg";
+const DAVID_PHOTO_400W_WEBP = "/assets/david-gambill-400w.webp";
+const DAVID_PHOTO_800W = "/assets/david-gambill-800w.jpg";
+const DAVID_PHOTO_800W_WEBP = "/assets/david-gambill-800w.webp";
 
 const Founder = () => {
   useEffect(() => {
@@ -148,12 +148,12 @@ const Founder = () => {
                 <picture>
                   <source
                     type="image/webp"
-                    srcSet={`${davidPhoto400wWebp.url} 400w, ${davidPhoto800wWebp.url} 800w`}
+                    srcSet={`${DAVID_PHOTO_400W_WEBP} 400w, ${DAVID_PHOTO_800W_WEBP} 800w`}
                     sizes="(max-width: 768px) 256px, 320px"
                   />
                   <img
-                    src={davidPhoto800w.url}
-                    srcSet={`${davidPhoto400w.url} 400w, ${davidPhoto800w.url} 800w`}
+                    src={DAVID_PHOTO_800W}
+                    srcSet={`${DAVID_PHOTO_400W} 400w, ${DAVID_PHOTO_800W} 800w`}
                     sizes="(max-width: 768px) 256px, 320px"
                     alt="Portrait of David Gambill, Founder of GnG Design Consultants"
                     className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl ring-4 ring-primary-foreground/25"
