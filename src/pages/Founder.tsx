@@ -99,33 +99,87 @@ const experience = [
   },
 ];
 
+const FOUNDER_TITLE = "David Gambill — Founder | GnG Design Consultants";
+const FOUNDER_DESC =
+  "David Gambill, Founder of GnG Design — 30+ years aerospace engineering across Boeing, AgustaWestland, eVTOL and fixed-wing programs.";
+const FOUNDER_URL = "https://gngaero.lovable.app/founder";
+
 const Founder = () => {
   useEffect(() => {
-    document.title = "David Gambill — Founder | GnG Design Consultants";
-    const ensure = (selector: string, create: () => HTMLElement) => {
-      let el = document.head.querySelector(selector) as HTMLElement | null;
+    document.title = FOUNDER_TITLE;
+
+    const upsertMeta = (attr: "name" | "property", key: string, value: string) => {
+      let el = document.head.querySelector(
+        `meta[${attr}="${key}"]`
+      ) as HTMLMetaElement | null;
       if (!el) {
-        el = create();
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
         document.head.appendChild(el);
       }
-      return el;
+      el.setAttribute("content", value);
     };
-    const desc = ensure('meta[name="description"]', () => {
-      const m = document.createElement("meta");
-      m.setAttribute("name", "description");
-      return m;
+
+    upsertMeta("name", "description", FOUNDER_DESC);
+    upsertMeta("property", "og:title", FOUNDER_TITLE);
+    upsertMeta("property", "og:description", FOUNDER_DESC);
+    upsertMeta("property", "og:url", FOUNDER_URL);
+    upsertMeta("property", "og:type", "profile");
+
+    let canonical = document.head.querySelector(
+      'link[rel="canonical"]'
+    ) as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", FOUNDER_URL);
+
+    const ldId = "founder-person-jsonld";
+    let ld = document.getElementById(ldId) as HTMLScriptElement | null;
+    if (!ld) {
+      ld = document.createElement("script");
+      ld.id = ldId;
+      ld.type = "application/ld+json";
+      document.head.appendChild(ld);
+    }
+    ld.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "David Gambill",
+      jobTitle: "Founder & CEO",
+      url: FOUNDER_URL,
+      worksFor: {
+        "@type": "Organization",
+        name: "GnG Design Consultants",
+      },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "West Chester",
+        addressRegion: "PA",
+        addressCountry: "US",
+      },
+      alumniOf: [
+        { "@type": "CollegeOrUniversity", name: "University of Texas at Arlington" },
+        { "@type": "CollegeOrUniversity", name: "University of Phoenix" },
+      ],
+      knowsAbout: [
+        "Aerospace Engineering",
+        "eVTOL",
+        "Rotorcraft",
+        "FAA Certification",
+        "ASTM F3264",
+        "MBSE",
+        "Systems Integration",
+      ],
     });
-    desc.setAttribute(
-      "content",
-      "David Gambill, Founder of GnG Design — 30+ years aerospace engineering across Boeing, AgustaWestland, eVTOL and fixed-wing programs."
-    );
-    const canonical = ensure('link[rel="canonical"]', () => {
-      const l = document.createElement("link");
-      l.setAttribute("rel", "canonical");
-      return l;
-    });
-    canonical.setAttribute("href", `${window.location.origin}/founder`);
+
+    return () => {
+      ld?.remove();
+    };
   }, []);
+
 
   return (
     <div className="min-h-screen bg-background">
