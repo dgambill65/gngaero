@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import davidPhoto from "@/assets/david-gambill.jpg.asset.json";
+import davidPhoto from "@/assets/david-gambill-headshot.jpg.asset.json";
 
 const focusAreas = [
   "eVTOL & Advanced Air Mobility",
@@ -135,57 +135,63 @@ const Founder = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
             <Link
               to="/"
-              className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground mb-8 transition-colors"
+              className="inline-flex items-center text-primary-foreground/80 hover:text-primary-foreground mb-10 transition-colors"
             >
               <ArrowLeft className="h-4 w-4 mr-2" /> Back to Home
             </Link>
-            <div className="grid md:grid-cols-[auto,1fr] gap-10 items-center">
-              <img
-                src={davidPhoto.url}
-                alt="Portrait of David Gambill, Founder of GnG Design Consultants"
-                className="w-48 h-48 md:w-56 md:h-56 rounded-2xl object-cover shadow-2xl ring-4 ring-primary-foreground/20"
-                loading="eager"
-              />
-              <div>
-                <p className="text-sm uppercase tracking-widest text-primary-foreground/70 mb-2">
+
+            <div className="flex flex-col items-center text-center">
+              <div className="relative mb-8">
+                <img
+                  src={davidPhoto.url}
+                  alt="Portrait of David Gambill, Founder of GnG Design Consultants"
+                  className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl ring-4 ring-primary-foreground/25"
+                  loading="eager"
+                  width={320}
+                  height={320}
+                />
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-primary-foreground text-primary text-sm font-semibold px-4 py-1.5 rounded-full shadow-lg">
                   Founder & CEO
-                </p>
-                <h1 className="text-4xl md:text-5xl font-bold mb-3">
-                  David Gambill
-                </h1>
-                <p className="text-xl text-primary-foreground/90 mb-6 max-w-2xl">
-                  Aerospace engineer helping early-stage VTOL and fixed-wing teams
-                  build the technical backbone to reach flight and certification.
-                </p>
-                <div className="flex flex-wrap gap-4 text-primary-foreground/90 mb-6">
-                  <span className="inline-flex items-center gap-2">
-                    <MapPin className="h-4 w-4" /> West Chester, PA
-                  </span>
-                  <span className="inline-flex items-center gap-2">
-                    <Phone className="h-4 w-4" /> 610-996-7934
-                  </span>
                 </div>
-                <div className="flex flex-wrap gap-3">
-                  <Button asChild variant="secondary" size="lg">
-                    <a href="mailto:davidg@gngdesignllc.com">
-                      <Mail className="h-4 w-4 mr-2" /> Email David
-                    </a>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="lg"
-                    className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              </div>
+
+              <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                David Gambill
+              </h1>
+              <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl">
+                Aerospace engineer helping early-stage VTOL and fixed-wing teams
+                build the technical backbone to reach flight and certification.
+              </p>
+
+              <div className="flex flex-wrap justify-center gap-6 text-primary-foreground/90 mb-8">
+                <span className="inline-flex items-center gap-2">
+                  <MapPin className="h-4 w-4" /> West Chester, PA
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <Phone className="h-4 w-4" /> 610-996-7934
+                </span>
+              </div>
+
+              <div className="flex flex-wrap justify-center gap-3">
+                <Button asChild variant="secondary" size="lg">
+                  <a href="mailto:davidg@gngdesignllc.com">
+                    <Mail className="h-4 w-4 mr-2" /> Email David
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                >
+                  <a
+                    href="https://linkedin.com/in/davidgambill"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <a
-                      href="https://linkedin.com/in/davidgambill"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Linkedin className="h-4 w-4 mr-2" /> LinkedIn
-                    </a>
-                  </Button>
-                </div>
+                    <Linkedin className="h-4 w-4 mr-2" /> LinkedIn
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
