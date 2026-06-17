@@ -15,7 +15,10 @@ import {
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import davidPhoto from "@/assets/david-gambill.jpg.asset.json";
+import davidPhoto400w from "@/assets/david-gambill-400w.jpg.asset.json";
+import davidPhoto400wWebp from "@/assets/david-gambill-400w.webp.asset.json";
+import davidPhoto800w from "@/assets/david-gambill-800w.jpg.asset.json";
+import davidPhoto800wWebp from "@/assets/david-gambill-800w.webp.asset.json";
 
 const focusAreas = [
   "eVTOL & Advanced Air Mobility",
