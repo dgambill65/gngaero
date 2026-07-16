@@ -34,7 +34,6 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-white/80">
-              <li>1121 Koble Lane</li>
               <li>West Chester, PA 19382</li>
               <li>610 996 7934</li>
               <li>davidg@gngdesignllc.com</li>
