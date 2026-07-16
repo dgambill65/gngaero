@@ -262,7 +262,6 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground">Office</h4>
                     <p className="text-muted-foreground">
-                      1121 Koble Lane<br />
                       West Chester, PA 19382
                     </p>
                   </div>
