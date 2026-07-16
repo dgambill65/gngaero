@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl font-bold mb-4">GnG Aero</h3>
+            <h3 className="text-xl font-bold mb-4">GnG Aero Consulting</h3>
             <p className="text-white/80 mb-4 leading-relaxed">
               Leading aviation engineering consultancy specializing in FAA and EASA compliance, 
               certification services, and innovative aerospace solutions.
@@ -44,7 +44,7 @@ const Footer = () => {
         <Separator className="my-8 bg-white/20" />
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
-          <p>&copy; 2024 GnG Aero. All rights reserved.</p>
+          <p>&copy; 2024 GnG Aero Consulting. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-aviation-sky transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-aviation-sky transition-colors">Terms of Service</a>

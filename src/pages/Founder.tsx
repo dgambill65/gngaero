@@ -35,7 +35,7 @@ const highlights = [
   },
   {
     icon: Compass,
-    title: "Founder, GnG Aero",
+    title: "Founder, GnG Aero Consulting",
     body: "Advising early-stage aerospace teams on systems integration, configuration control, and the engineering backbone needed to reach design-review and certification milestones.",
   },
   {
@@ -50,9 +50,9 @@ const highlights = [
   },
 ];
 
-const FOUNDER_TITLE = "David Gambill — Founder | GnG Aero";
+const FOUNDER_TITLE = "David Gambill — Founder | GnG Aero Consulting";
 const FOUNDER_DESC =
-  "Meet David Gambill, Founder of GnG Aero — aerospace engineer with 30+ years in rotorcraft, tiltrotor, eVTOL and certification leadership.";
+  "Meet David Gambill, Founder of GnG Aero Consulting — aerospace engineer with 30+ years in rotorcraft, tiltrotor, eVTOL and certification leadership.";
 const FOUNDER_URL = "https://gngaero.lovable.app/founder";
 const DAVID_PHOTO_400W = "/assets/david-gambill-400w.jpg";
 const DAVID_PHOTO_400W_WEBP = "/assets/david-gambill-400w.webp";
@@ -107,7 +107,7 @@ const Founder = () => {
       url: FOUNDER_URL,
       worksFor: {
         "@type": "Organization",
-        name: "GnG Aero",
+        name: "GnG Aero Consulting",
       },
       address: {
         "@type": "PostalAddress",
@@ -162,7 +162,7 @@ const Founder = () => {
                     src={DAVID_PHOTO_800W}
                     srcSet={`${DAVID_PHOTO_400W} 400w, ${DAVID_PHOTO_800W} 800w`}
                     sizes="(max-width: 768px) 256px, 320px"
-                    alt="Portrait of David Gambill, Founder of GnG Aero"
+                    alt="Portrait of David Gambill, Founder of GnG Aero Consulting"
                     className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl ring-4 ring-primary-foreground/25"
                     loading="eager"
                     width={320}
@@ -230,7 +230,7 @@ const Founder = () => {
                 review, and certify.
               </p>
               <p>
-                I started GnG Aero to bring that experience to founders who
+                I started GnG Aero Consulting to bring that experience to founders who
                 are brilliant on the technology but stuck on the engineering
                 machinery around it — requirements, configuration control, gate
                 reviews, FAA strategy, the digital thread that holds it all
