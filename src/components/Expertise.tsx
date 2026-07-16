@@ -6,7 +6,8 @@ const Expertise = () => {
     { label: "Projects Completed", value: "500+", description: "Successful aviation projects delivered" },
     { label: "Years Experience", value: "20+", description: "Combined team expertise in aviation" },
     { label: "Certifications", value: "95%", description: "Success rate for certification projects" },
-    { label: "Client Retention", value: "98%", description: "Long-term partnerships with aviation companies" }
+    { label: "Client Retention", value: "98%", description: "Long-term partnerships with aviation companies" },
+    { label: "Design Workflow", value: "AI-Integrated", description: "CFD, CAD, and FEM pipelines with AI-assisted review at every stage." }
   ];
 
   const expertise = [
@@ -15,7 +16,8 @@ const Expertise = () => {
     { area: "Aircraft Systems", level: 92 },
     { area: "Safety Analysis", level: 96 },
     { area: "Technical Documentation", level: 94 },
-    { area: "Certification Processes", level: 97 }
+    { area: "Certification Processes", level: 97 },
+    { area: "AI-Assisted Engineering", level: 90 }
   ];
 
   return (
@@ -31,7 +33,7 @@ const Expertise = () => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
           {stats.map((stat, index) => (
             <Card key={index} className="text-center p-6 border-border">
               <CardContent className="p-0">
