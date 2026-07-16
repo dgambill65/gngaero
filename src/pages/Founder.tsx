@@ -12,6 +12,7 @@ import {
   Compass,
   Lightbulb,
   Quote,
+  Cog,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -22,7 +23,8 @@ const focusAreas = [
   "FAA / EASA Certification Strategy",
   "Systems Engineering (MBSE)",
   "Digital Engineering & PLM",
-  "AI-Assisted Workflows",
+  "AI-Integrated CFD/CAD/FEM Pipelines",
+  "AI-Driven Engineering QA",
 ];
 
 const highlights = [
@@ -40,6 +42,11 @@ const highlights = [
     icon: Lightbulb,
     title: "Two U.S. patents",
     body: "Inventor on patents covering wing fences for VTOL aircraft and lift-plus-cruise quadcopter control — practical IP from years on the drawing board.",
+  },
+  {
+    icon: Cog,
+    title: "AI-Driven Engineering Pipeline",
+    body: "Built and directs a live AI-assisted CFD/CAD/FEM workflow — OpenVSP geometry, VSPAERO CFD, FreeCAD FEM — with AI-driven review catching structural analysis errors other tools missed.",
   },
 ];
 
@@ -231,10 +238,13 @@ const Founder = () => {
                 it.
               </p>
               <p>
-                When I'm not in CAD or a design review, I'm exploring how AI
-                tools change the way small aerospace teams move — the same
-                workflows the big OEMs take years to adopt are practical for a
-                ten-person startup today.
+                I've built out an AI-integrated engineering pipeline at GnG —
+                OpenVSP parametric geometry, VSPAERO CFD, and a
+                FreeCAD/CalculiX/Gmsh FEM toolchain, tied together with an
+                AI-built conceptual sizing tool. AI-assisted review has also
+                caught real errors that passed prior automated checks —
+                including a mis-referenced buckling formula and a
+                fastener-load calculation error in structural stress workbooks.
               </p>
             </div>
           </div>
@@ -258,7 +268,7 @@ const Founder = () => {
             <h2 className="text-3xl font-bold text-foreground mb-10">
               At a glance
             </h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {highlights.map(({ icon: Icon, title, body }) => (
                 <div
                   key={title}
