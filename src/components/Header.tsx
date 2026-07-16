@@ -18,7 +18,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <span className="text-xl font-bold text-primary">GnG Design Consultants</span>
+            <span className="text-xl font-bold text-primary">GnG Aero</span>
           </div>
           
           <nav className="hidden md:flex space-x-8">
