@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Lightbulb, Cog, Shield, FileText } from "lucide-react";
+import { Lightbulb, Cog, Shield, FileText, Zap } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -27,6 +27,12 @@ const Services = () => {
       title: "Regulatory Requirements",
       description: "Navigate complex aviation regulations with our comprehensive compliance and documentation services.",
       features: ["Regulatory Analysis", "Documentation Prep", "Compliance Audits", "Technical Writing"]
+    },
+    {
+      icon: <Zap className="h-8 w-8 text-primary" />,
+      title: "AI-Integrated Engineering",
+      description: "AI-assisted CFD, CAD, and FEM workflows that speed up conceptual design and catch errors traditional review misses.",
+      features: ["OpenVSP & VSPAERO CFD", "AI-Built Conceptual Sizing", "FreeCAD/CalculiX FEM", "AI-Driven Design QA"]
     }
   ];
 
@@ -42,7 +48,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border">
               <CardHeader className="text-center">
