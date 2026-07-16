@@ -81,7 +81,7 @@ const handler = async (req: Request): Promise<Response> => {
         <p>We look forward to helping you with your aviation project!</p>
         
         <p>Best regards,<br>
-        <strong>GnG Aero Team</strong><br>
+        <strong>GnG Aero Consulting Team</strong><br>
         West Chester, PA 19382<br>
         Phone: 610 996 7934</p>
       `,
