@@ -36,14 +36,10 @@ const About = () => {
               Leading Aviation Engineering Consultancy
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              GnG Aero Consulting has been at the forefront of aviation consulting for over two decades, 
-              providing specialized engineering services to aviation companies worldwide. Our team of certified 
-              engineers and regulatory experts ensures your projects meet the most stringent industry standards.
+              I've spent more than three decades in aviation engineering — rotorcraft structures at Boeing, the AW609 tiltrotor at Leonardo AgustaWestland, and chief-engineer roles at eVTOL and hybrid-VTOL startups. GnG Aero Consulting brings that experience directly to your program.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              From initial concept through final certification, we guide aviation companies through complex 
-              regulatory landscapes, ensuring compliance with both FAA and EASA requirements while maintaining 
-              the highest levels of safety and performance.
+              I sit with your team, not above it — from initial concept through final certification, working through FAA and EASA compliance, systems integration, and the engineering discipline it takes to actually fly.
             </p>
             <Button size="lg" className="bg-primary hover:bg-primary-light">
               Learn More About Us

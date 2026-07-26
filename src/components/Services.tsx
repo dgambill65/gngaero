@@ -1,9 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Lightbulb, Cog, Shield, FileText, Zap } from "lucide-react";
+import { Lightbulb, Cog, Shield, FileText, Zap, ShieldAlert } from "lucide-react";
 
 const Services = () => {
   const services = [
+    {
+      icon: <ShieldAlert className="h-8 w-8 text-primary" />,
+      title: "Fatigue & Damage Tolerance",
+      description: "F&DT planning and substantiation for hybrid metallic/composite airframes — §29.571/§29.573 strategy, loads and FEM sequencing, and inspection-interval economics baked in at preliminary design.",
+      features: ["F&DT Program Planning", "Loads & Spectra Development", "GFEM/DFEM Strategy", "Airworthiness Limitations (ALS)"]
+    },
     {
       icon: <Lightbulb className="h-8 w-8 text-primary" />,
       title: "Research & Development",

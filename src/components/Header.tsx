@@ -34,6 +34,9 @@ const Header = () => {
             <Link to="/founder" className="text-foreground hover:text-primary transition-colors">
               Founder
             </Link>
+            <a href="#resources" className="text-foreground hover:text-primary transition-colors">
+              Resources
+            </a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">
               Contact
             </a>
@@ -87,6 +90,13 @@ const Header = () => {
               >
                 Founder
               </Link>
+              <a
+                href="#resources"
+                className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Resources
+              </a>
               <a
                 href="#contact"
                 className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
