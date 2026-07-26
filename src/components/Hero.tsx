@@ -35,23 +35,23 @@ const Hero = () => {
             Aviation Engineering Excellence for{" "}
             <span className="text-aviation-sky">FAA & EASA</span> Compliance
           </h1>
-          
+
           <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-            Expert engineering consulting for aviation companies. From research and development to certification compliance, we deliver cutting-edge solutions that meet the highest industry standards.
+            I'm David Gambill — 30+ years in rotorcraft, tiltrotor, and eVTOL structures and certification. I help aviation teams get from concept to certification, from R&D through FAA and EASA compliance.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-primary hover:bg-primary-light text-white"
               onClick={scrollToContact}
             >
               Get Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
+            <Button
+              variant="outline"
+              size="lg"
               className="border-white bg-transparent text-white hover:bg-white hover:text-aviation-navy"
               onClick={scrollToServices}
             >
@@ -62,15 +62,15 @@ const Hero = () => {
           <div className="flex flex-wrap gap-6 text-white/80">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-aviation-sky" />
-              <span>FAA Certified</span>
+              <span>FAA & EASA Certification Experience</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-aviation-sky" />
-              <span>EASA Compliant</span>
+              <span>Rotorcraft · Tiltrotor · eVTOL</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-aviation-sky" />
-              <span>20+ Years Experience</span>
+              <span>30+ Years Experience</span>
             </div>
           </div>
         </div>

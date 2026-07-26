@@ -53,7 +53,7 @@ const highlights = [
 const FOUNDER_TITLE = "David Gambill — Founder | GnG Aero Consulting";
 const FOUNDER_DESC =
   "Meet David Gambill, Founder of GnG Aero Consulting — aerospace engineer with 30+ years in rotorcraft, tiltrotor, eVTOL and certification leadership.";
-const FOUNDER_URL = "https://gngaero.lovable.app/founder";
+const FOUNDER_URL = "https://gngaero.com/founder";
 const DAVID_PHOTO_400W = "/assets/david-gambill-400w.jpg";
 const DAVID_PHOTO_400W_WEBP = "/assets/david-gambill-400w.webp";
 const DAVID_PHOTO_800W = "/assets/david-gambill-800w.jpg";

@@ -1,23 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 
 const Expertise = () => {
   const stats = [
-    { label: "Projects Completed", value: "500+", description: "Successful aviation projects delivered" },
-    { label: "Years Experience", value: "20+", description: "Combined team expertise in aviation" },
-    { label: "Certifications", value: "95%", description: "Success rate for certification projects" },
-    { label: "Client Retention", value: "98%", description: "Long-term partnerships with aviation companies" },
-    { label: "Design Workflow", value: "AI-Integrated", description: "CFD, CAD, and FEM pipelines with AI-assisted review at every stage." }
-  ];
-
-  const expertise = [
-    { area: "FAA Regulations", level: 98 },
-    { area: "EASA Compliance", level: 95 },
-    { area: "Aircraft Systems", level: 92 },
-    { area: "Safety Analysis", level: 96 },
-    { area: "Technical Documentation", level: 94 },
-    { area: "Certification Processes", level: 97 },
-    { area: "AI-Assisted Engineering", level: 90 }
+    { value: "30+ Years", label: "Aerospace Experience", description: "Rotorcraft, tiltrotor & eVTOL structures and certification" },
+    { value: "17 Years", label: "Boeing", description: "CH-47 Chinook structures at The Boeing Company" },
+    { value: "AW609", label: "Tiltrotor Certification", description: "Design Quality Leader on the first civil tiltrotor certification effort" },
+    { value: "2 U.S. Patents", label: "VTOL Innovation", description: "VTOL wing fences and lift-plus-cruise quadcopter control" },
+    { value: "AI-Integrated", label: "Design Workflow", description: "CFD, CAD, and FEM pipelines with AI-assisted review at every stage." }
   ];
 
   return (
@@ -28,12 +17,11 @@ const Expertise = () => {
             Proven Aviation Expertise
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Two decades of specialized experience in aviation engineering, regulatory compliance, and certification processes.
+            More than three decades of hands-on aerospace engineering — from Boeing rotorcraft to civil tiltrotor certification and eVTOL chief-engineer roles.
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {stats.map((stat, index) => (
             <Card key={index} className="text-center p-6 border-border">
               <CardContent className="p-0">
@@ -49,24 +37,6 @@ const Expertise = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Expertise Levels */}
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold text-foreground text-center mb-8">
-            Our Core Competencies
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {expertise.map((item, index) => (
-              <div key={index} className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <span className="text-foreground font-medium">{item.area}</span>
-                  <span className="text-primary font-semibold">{item.level}%</span>
-                </div>
-                <Progress value={item.level} className="h-2" />
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
