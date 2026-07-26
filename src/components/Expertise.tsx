@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const Expertise = () => {
   const stats = [
     { value: "30+ Years", label: "Aerospace Experience", description: "Rotorcraft, tiltrotor & eVTOL structures and certification" },
-    { value: "17 Years", label: "Boeing", description: "CH-47 Chinook structures at The Boeing Company" },
+    { value: "18 Years", label: "Boeing", description: "8 years on CH-47 Chinook, 10+ years on 777/767/787 fixed-wing programs" },
     { value: "AW609", label: "Tiltrotor Certification", description: "Design Quality Leader on the first civil tiltrotor certification effort" },
     { value: "2 U.S. Patents", label: "VTOL Innovation", description: "VTOL wing fences and lift-plus-cruise quadcopter control" },
     { value: "AI-Integrated", label: "Design Workflow", description: "CFD, CAD, and FEM pipelines with AI-assisted review at every stage." }
