@@ -37,7 +37,7 @@ const Services = () => {
     {
       icon: <Zap className="h-8 w-8 text-primary" />,
       title: "AI-Integrated Engineering",
-      description: "AI-assisted CFD, CAD, and FEM workflows that speed up conceptual design and catch errors traditional review misses.",
+      description: "AI-assisted CFD, CAD, and FEM workflows that speed up conceptual design, catch errors traditional review misses, and let a lean senior team carry work that would otherwise need a much larger group — critical at the concept and PDR stages, when specialized headcount is hardest to justify.",
       features: ["OpenVSP & VSPAERO CFD", "AI-Built Conceptual Sizing", "FreeCAD/CalculiX FEM", "AI-Driven Design QA"]
     }
   ];
