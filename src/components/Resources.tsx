@@ -24,10 +24,10 @@ const Resources = () => {
                 </div>
                 <div>
                   <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2">
-                    Fatigue &amp; Damage Tolerance Planning for Hybrid eVTOL Structures
+                    Fatigue &amp; Damage Tolerance Planning for Hybrid Airframes
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Why powered-lift airframes run two certification philosophies at once — and five planning principles that keep programs off the critical path. Free PDF, no signup required.
+                    Why rotorcraft, fixed-wing, and eVTOL airframes run two certification philosophies at once — and five planning principles that keep programs off the critical path. Free PDF, no signup required.
                   </p>
                 </div>
               </div>
