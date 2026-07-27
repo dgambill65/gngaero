@@ -192,6 +192,7 @@ const Contact = () => {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
+                            <SelectItem value="fatigue-damage-tolerance">Fatigue & Damage Tolerance</SelectItem>
                             <SelectItem value="research-development">Research & Development</SelectItem>
                             <SelectItem value="product-design">Product Design Development</SelectItem>
                             <SelectItem value="certification">Certification Services</SelectItem>
@@ -274,7 +275,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground">Hours</h4>
                     <p className="text-muted-foreground">
-                      Monday - Friday: 8:00 AM - 6:00 PM PST<br />
+                      Monday - Friday: 8:00 AM - 6:00 PM ET<br />
                       Emergency Support: 24/7
                     </p>
                   </div>

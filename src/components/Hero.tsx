@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroAircraft}
-          alt="Modern commercial aircraft in flight"
+          alt="Aircraft in flight — FAA and EASA certification, fatigue and damage tolerance, and eVTOL structures consulting"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-aviation-navy/90 via-aviation-navy/70 to-transparent"></div>
