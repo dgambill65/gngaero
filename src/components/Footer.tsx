@@ -13,9 +13,7 @@ const Footer = () => {
               certification services, and innovative aerospace solutions.
             </p>
             <div className="flex flex-col gap-2 text-sm text-white/70">
-              <p>FAA Certified Engineering Services</p>
               <p>EASA Compliance Specialists</p>
-              <p>ISO 9001:2015 Certified</p>
             </div>
           </div>
 
@@ -23,6 +21,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-white/80">
+              <li><a href="#services" className="hover:text-aviation-sky transition-colors">Fatigue & Damage Tolerance</a></li>
               <li><a href="#services" className="hover:text-aviation-sky transition-colors">Research & Development</a></li>
               <li><a href="#services" className="hover:text-aviation-sky transition-colors">Product Design</a></li>
               <li><a href="#services" className="hover:text-aviation-sky transition-colors">Certification</a></li>
@@ -44,12 +43,7 @@ const Footer = () => {
         <Separator className="my-8 bg-white/20" />
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
-          <p>&copy; 2024 GnG Aero Consulting. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-aviation-sky transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-aviation-sky transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-aviation-sky transition-colors">Quality Management</a>
-          </div>
+          <p>&copy; 2026 GnG Aero Consulting. All rights reserved.</p>
         </div>
       </div>
     </footer>
