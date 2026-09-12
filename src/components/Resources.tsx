@@ -30,7 +30,7 @@ const ROLES = [
   "Founder or executive",
   "Engineering lead",
   "Structures or certification engineer",
-  "Programme or project manager",
+  "Program or project manager",
   "Investor",
   "Other",
 ] as const;
@@ -48,7 +48,7 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 const BULLETS = [
-  "31 pages, fully referenced — 18 sources, each read rather than summarised",
+  "31 pages, fully referenced — 18 sources, each read rather than summarized",
   "Why one full-scale test article will not substantiate both materials",
   "How inspection intervals are actually constructed, and what they cost per flight hour",
   "A ninety-day plan you can start before the configuration is frozen",

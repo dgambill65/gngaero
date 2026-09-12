@@ -20,7 +20,7 @@ const ROLES = [
   "Founder or executive",
   "Engineering lead",
   "Structures or certification engineer",
-  "Programme or project manager",
+  "Program or project manager",
   "Investor",
   "Other",
 ];
