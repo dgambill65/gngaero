@@ -86,6 +86,48 @@ export type Database = {
         }
         Relationships: []
       }
+      whitepaper_leads: {
+        Row: {
+          company: string
+          consent: boolean
+          created_at: string
+          document: string
+          email: string
+          first_name: string
+          id: string
+          last_name: string
+          referrer: string | null
+          role: string
+          user_agent: string | null
+        }
+        Insert: {
+          company: string
+          consent?: boolean
+          created_at?: string
+          document?: string
+          email: string
+          first_name: string
+          id?: string
+          last_name: string
+          referrer?: string | null
+          role: string
+          user_agent?: string | null
+        }
+        Update: {
+          company?: string
+          consent?: boolean
+          created_at?: string
+          document?: string
+          email?: string
+          first_name?: string
+          id?: string
+          last_name?: string
+          referrer?: string | null
+          role?: string
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
