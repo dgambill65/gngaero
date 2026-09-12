@@ -2,3 +2,6 @@ project_id = "vwqolpibbkpuqfcspgji"
 
 [functions.send-consultation-notification]
 verify_jwt = false
+
+[functions.request-whitepaper]
+verify_jwt = false
