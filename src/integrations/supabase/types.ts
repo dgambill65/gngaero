@@ -98,6 +98,7 @@ export type Database = {
           last_name: string
           referrer: string | null
           role: string
+          source: string | null
           user_agent: string | null
         }
         Insert: {
@@ -111,6 +112,7 @@ export type Database = {
           last_name: string
           referrer?: string | null
           role: string
+          source?: string | null
           user_agent?: string | null
         }
         Update: {
@@ -124,6 +126,7 @@ export type Database = {
           last_name?: string
           referrer?: string | null
           role?: string
+          source?: string | null
           user_agent?: string | null
         }
         Relationships: []
