@@ -177,6 +177,7 @@ serve(async (req: Request): Promise<Response> => {
             <tr><td style="color:#666;">Company</td><td><strong>${safe.company}</strong></td></tr>
             <tr><td style="color:#666;">Role</td><td>${safe.role}</td></tr>
             <tr><td style="color:#666;">Marketing consent</td><td>${consent === true ? "Yes" : "No"}</td></tr>
+            <tr><td style="color:#666;">Source</td><td>${leadSource ? escapeHtml(leadSource) : "—"}</td></tr>
           </table>
           <hr style="margin:20px 0;" />
           <p style="color:#666;font-size:12px;">Automated notification from the GnG Aero Consulting website.</p>
