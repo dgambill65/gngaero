@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Founder from "./pages/Founder";
 import WhitepaperRedirect from "./pages/WhitepaperRedirect";
+import Fdt from "./pages/Fdt";
+import FdtRedirect from "./pages/FdtRedirect";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
