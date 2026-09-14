@@ -21,6 +21,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/founder" element={<Founder />} />
+          <Route path="/fdt" element={<Fdt />} />
+          <Route path="/white-paper" element={<FdtRedirect />} />
+          <Route path="/whitepaper" element={<FdtRedirect />} />
           <Route
             path="/resources/fdt-hybrid-evtol-whitepaper.pdf"
             element={<WhitepaperRedirect />}
