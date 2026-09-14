@@ -85,6 +85,13 @@ serve(async (req: Request): Promise<Response> => {
     const referrer = req.headers.get("referer") ?? req.headers.get("origin");
     const userAgent = req.headers.get("user-agent");
 
+    // Traffic source: letters, numbers, hyphen and underscore only, 100 chars max.
+    const cleanedSource =
+      typeof source === "string"
+        ? source.replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 100)
+        : "";
+    const leadSource = cleanedSource.length > 0 ? cleanedSource : null;
+
     const { error: insertError } = await supabase.from("whitepaper_leads").insert({
       first_name: fields.firstName,
       last_name: fields.lastName,
@@ -95,6 +102,7 @@ serve(async (req: Request): Promise<Response> => {
       consent: consent === true,
       referrer: referrer?.slice(0, 500) ?? null,
       user_agent: userAgent?.slice(0, 500) ?? null,
+      source: leadSource,
     });
 
     if (insertError) {
@@ -102,10 +110,37 @@ serve(async (req: Request): Promise<Response> => {
       return json({ error: "Could not record your request. Please try again." }, 500);
     }
 
+    // Resolve the current edition at request time: newest PDF in the bucket wins,
+    // so a new revision can be dropped in under any filename with no code change.
+    const resolveLatestPdf = async () => {
+      const { data, error } = await supabase.storage.from(BUCKET).list("", {
+        limit: 100,
+        sortBy: { column: "created_at", order: "desc" },
+      });
+      if (error) throw error;
+      const pdfs = (data ?? [])
+        .filter((item) => item.name?.toLowerCase().endsWith(".pdf"))
+        .sort((a, b) => {
+          const at = new Date(a.created_at ?? 0).getTime();
+          const bt = new Date(b.created_at ?? 0).getTime();
+          return bt - at;
+        });
+      if (pdfs.length === 0) throw new Error("No PDF found in the whitepapers bucket.");
+      return pdfs[0].name as string;
+    };
+
+    let objectPath: string;
+    try {
+      objectPath = await resolveLatestPdf();
+    } catch (err) {
+      console.error("Failed to resolve the current white paper object:", err);
+      return json({ error: "The document is temporarily unavailable. Please try again shortly." }, 500);
+    }
+
     const makeSignedUrl = async () => {
       const { data, error } = await supabase.storage
         .from(BUCKET)
-        .createSignedUrl(OBJECT_PATH, EXPIRES_IN);
+        .createSignedUrl(objectPath, EXPIRES_IN);
       if (error || !data?.signedUrl) throw error ?? new Error("No signed URL returned.");
       return data.signedUrl;
     };
