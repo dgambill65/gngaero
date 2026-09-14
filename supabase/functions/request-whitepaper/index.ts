@@ -48,7 +48,7 @@ serve(async (req: Request): Promise<Response> => {
       return json({ error: "Invalid request body." }, 400);
     }
 
-    const { firstName, lastName, email, company, role, consent, website } =
+    const { firstName, lastName, email, company, role, consent, website, source } =
       payload as Record<string, unknown>;
 
     // Silent bot trap — honeypot filled in, pretend everything is fine.
