@@ -8,7 +8,6 @@ const corsHeaders = {
 };
 
 const BUCKET = "whitepapers";
-const OBJECT_PATH = "mkt-05-fdt-planning-rev-h.pdf";
 const DOCUMENT = "MKT-05 Rev H — F&DT Planning for Hybrid eVTOL Structures";
 const FROM = "GnG Aero Consulting <noreply@updates.gngaero.com>";
 const ADMIN_EMAIL = "davidg@gngdesignllc.com";
