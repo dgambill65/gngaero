@@ -8,6 +8,8 @@ import Founder from "./pages/Founder";
 import WhitepaperRedirect from "./pages/WhitepaperRedirect";
 import Fdt from "./pages/Fdt";
 import FdtRedirect from "./pages/FdtRedirect";
+import Videos from "./pages/Videos";
+import VideoDetail from "./pages/VideoDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/fdt" element={<Fdt />} />
           <Route path="/white-paper" element={<FdtRedirect />} />
           <Route path="/whitepaper" element={<FdtRedirect />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/videos/:slug" element={<VideoDetail />} />
           <Route
             path="/resources/fdt-hybrid-evtol-whitepaper.pdf"
             element={<WhitepaperRedirect />}
