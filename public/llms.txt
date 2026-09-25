@@ -9,3 +9,4 @@ GnG Aero Consulting (GnG Aero Consulting LLC) is led by founder David Gambill, a
 - [Home](/): Overview of services, expertise, and how to contact GnG Aero Consulting.
 - [Founder](/founder): David Gambill's bio, professional experience, education, and patents.
 - [Fatigue & Damage Tolerance White Paper](/fdt): Fatigue & Damage Tolerance Planning for Hybrid eVTOL Structures — 31-page white paper by David Gambill, available by email request.
+- [Videos](/videos): Nineteen short videos by David Gambill on aircraft structures, certification, and engineering consulting.
