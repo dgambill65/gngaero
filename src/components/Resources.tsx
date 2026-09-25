@@ -72,6 +72,15 @@ const Resources = () => {
                     <ArrowRight className="h-4 w-4 ml-1" />
                   </Link>
                 </p>
+                <p className="text-sm text-muted-foreground">
+                  <Link
+                    to="/videos"
+                    className="text-primary font-medium inline-flex items-center hover:underline"
+                  >
+                    Watch the video series
+                    <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
+                </p>
               </div>
             </CardContent>
           </Card>
