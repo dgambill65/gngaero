@@ -21,7 +21,7 @@ const Header = () => {
             <span className="text-xl font-bold text-primary">GnG Aero Consulting</span>
           </div>
           
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-6 md:text-sm lg:text-base">
             <a href="#services" className="text-foreground hover:text-primary transition-colors">
               Services
             </a>

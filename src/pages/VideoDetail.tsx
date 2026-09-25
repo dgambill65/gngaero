@@ -136,7 +136,11 @@ const VideoDetail = () => {
             ) : (
               <div className="aspect-video mb-10 rounded-lg bg-muted border border-border flex items-center justify-center px-6 text-center">
                 <p className="text-lg font-medium text-muted-foreground">
-                  {postDateHasPassed ? "Coming soon" : `Posts ${formattedDate}`}
+                  {video.status === "posted"
+                    ? "Posted on LinkedIn — embed coming."
+                    : postDateHasPassed
+                      ? "Coming soon"
+                      : `Posts ${formattedDate}`}
                 </p>
               </div>
             )}
