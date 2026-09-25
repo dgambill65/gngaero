@@ -1,28 +1,21 @@
-## Plan: Founder Bio Page — David Gambill
+# GnG Aero Video Library
 
-Create a dedicated `/founder` route showcasing David Gambill's professional background, with his headshot from the uploaded AdvisorBio.
+## Scope
+- Add a typed 19-item video catalog with slug lookup and path helpers.
+- Build a filterable `/videos` library using the current site typography, colors, cards, header, and footer.
+- Build `/videos/:slug` detail pages with YouTube, LinkedIn, or scheduled states, plus metadata, navigation, and calls to action.
+- Add the two routes and link Videos from desktop navigation, mobile navigation, and the Resources section.
+- Add the library and all 19 video pages to the sitemap and page index.
+- Keep the white-paper flow, Supabase, Founder page, and all other sections unchanged. Do not publish.
 
-### 1. Asset
-- Upload the headshot from `AdvisorBio.docx` to Lovable Assets (CDN) → `src/assets/david-gambill.jpg.asset.json`.
+## Behavior
+- Library defaults to All and filters locally by Technical or Business, ordered Topic 1–19.
+- Detail pages render a privacy-enhanced YouTube embed only when `youtubeId` exists, otherwise LinkedIn or scheduled messaging.
+- Unknown slugs use the existing Not Found page.
+- Video metadata updates per detail page; `VideoObject` structured data appears only for YouTube videos.
 
-### 2. New page: `src/pages/Founder.tsx`
-Sections, styled with existing aviation design tokens (navy/gold) and shadcn components:
-- **Hero**: Headshot (rounded, framed), name, title ("Founder & CEO, GnG Design LLC"), location (West Chester, PA), short tagline, contact links (email, LinkedIn), "Back to Home" / "Get in Touch" buttons.
-- **About / Bio**: Two-paragraph narrative from AdvisorBio (30+ yrs aerospace, startups advised, GnG Design role, patents, Philadelphia-based).
-- **Professional Summary**: From resume (senior aerospace exec, rotorcraft/eVTOL/fixed-wing, PDR/CDR leadership, certification frameworks).
-- **Core Competencies**: Grid of badges/cards — Vehicle Integration, MBSE, Certification (FAA Part 23/25/27/29, ASTM F3264), Digital Thread (NX, CATIA, Teamcenter, 3DEXPERIENCE), Propulsion (Electric/Hybrid), Team Leadership, Agile Programs, AI Integration.
-- **Experience Timeline**: Vertical timeline cards for each role — GnG Design (2014–Present), EOS Aircraft, Doroni Aerospace, XTI Aircraft, AgustaWestland, Boeing — with dates, location, and key accomplishments from the resume.
-- **Education & Patents**: B.S. Aerospace (UT Arlington), MBA Tech Management (Phoenix), U.S. Patent 12,312,080 B1 (Wing Fences for VTOL), U.S. Patent App 2024/0217653 A1 (Lift Plus Cruise Quadcopter Control).
-- **CTA**: Link back to contact section on home page.
-
-### 3. Routing & navigation
-- Register `/founder` route in `src/App.tsx` above the catch-all.
-- Add a "Founder" link to `Header.tsx` desktop nav and mobile menu (uses `react-router-dom` `Link` since cross-page).
-
-### 4. SEO
-- Set `<title>` "David Gambill — Founder | GnG Design Consultants" (<60 chars), meta description (<160 chars), canonical, single H1 with his name, alt text on headshot, semantic sections.
-
-### Technical notes
-- No backend changes. Pure frontend page using existing shadcn `Card`, `Button`, `Badge`, and lucide icons (Mail, Linkedin, MapPin, Award, GraduationCap, Briefcase).
-- Style strictly via design tokens already in `index.css` / `tailwind.config.ts` (aviation-navy, gold, etc.) — no hardcoded colors.
-- Headshot served from CDN via `.asset.json` import.
+## Validation
+- Check the current diagnostics after edits and resolve any build errors.
+- Run the project typecheck/tests available for this scope.
+- Verify `/videos`, a valid detail page, filtering, an unknown slug, and mobile layout in the preview.
+- Confirm no publish action was taken.
